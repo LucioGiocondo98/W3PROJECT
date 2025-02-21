@@ -165,6 +165,18 @@ rollTheDices(3)
 /* ESERCIZIO 10
 Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
 */
+const isTodayMyBirthday = function () {
+  const today = new Date()
+  const todayMonth = today.getMonth() + 1
+  const todayDay = today.getDate()
+
+  const birthdayMonth = 7
+  const birthdayDay = 24
+
+  return todayMonth === birthdayMonth && todayDay === birthdayDay;
+}
+
+console.log('oggi il mio compleanno',isTodayMyBirthday())
 // Arrays & Oggetti
 
 // NOTA: l'array "movies" usato in alcuni esercizi è definito alla fine di questo file
@@ -390,8 +402,8 @@ printTdText();
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
-const addBackgrond = document.querySelectorAll('a')
-addBackground.forEach(link => {
+const newBackGround = document.querySelectorAll('a')
+ newBackGround.forEach(link => {
   link.style.backgroundColor = 'red';
 })
 /* ESERCIZIO 24
